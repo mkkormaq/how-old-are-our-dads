@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1c44e26235.js" crossorigin="anonymous"></script>
+        <title>How Old Are OUR Dads?</title>
+    </head>
+    <body>
+        <h1>How Old Are Our Dads?</h1>
+        <section>
+            <% for( let i = 0; i < users.length; i++) {%>
+                <div>
+                    <h2>
+                        <%= users[i].userName %>'s dad <%= users[i].dadName %> is <%= ages[i] %>
+                    </h2>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            <% } %>
+        </section>
+        <form action="/addBDay" method="post">
+            <input type="text" placeholder="Your Name" name="userName">
+            <input type="text" placeholder="Your Dad's Name" name="dadName">
+            <input type="date" name="dadBDay" id="bDay">
+            <input type="submit">
+        </form>
+        <script src="js/main.js"></script>
+    </body>
+</html>
